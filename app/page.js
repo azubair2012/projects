@@ -1,113 +1,135 @@
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { BiLogInCircle } from "react-icons/bi";
+import { HiShoppingCart } from "react-icons/hi";
+import { GiLava } from "react-icons/gi";
+import Asset1 from "../public/assets/image/asset1.jpg";
+import Asset2 from "../public/assets/image/asset2.jpg";
+import Asset3 from "../public/assets/image/asset3.jpg";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main>
+      {/* navbar */}
+      <div
+        id="navBar"
+        className="flex text-white mt-5 font-mono justify-between bg-black rounded-[70px] w-[1260px] h-[80px] mx-auto"
+      >
+        <Link href="/">
+          <div
+            id="logo"
+            className=" items-center flex justify-center w-[150px] h-20 border-solid border-4 rounded-[40px] border-orange-500"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <GiLava size={50} />{" "}
+          </div>{" "}
+        </Link>{" "}
+        <div id="nav" className="flex gap-2">
+          <Link href="">
+            <div className="border-orange-500 items-center flex justify-center w-[230px] h-20 rounded-[40px] border-solid border-4">
+              NEW ARRIVALS{" "}
+            </div>{" "}
+          </Link>{" "}
+          <Link href="">
+            <div className=" items-center flex justify-center w-[230px] h-20 rounded-[40px] border-solid border-4 border-orange-500">
+              BRANDS{" "}
+            </div>{" "}
+          </Link>{" "}
+          <Link href="#collection">
+            <div className=" items-center flex justify-center w-[230px] h-20 rounded-[40px] border-solid border-4 border-orange-500">
+              OUR COLLECTIONS{" "}
+            </div>{" "}
+          </Link>{" "}
+        </div>{" "}
+        <div id="cart_log" className="flex gap-2">
+          <Link href="#">
+            <div className=" items-center flex justify-center w-[130px] h-20 rounded-[40px] border-solid border-4 border-orange-500">
+              CART <HiShoppingCart />
+            </div>{" "}
+          </Link>{" "}
+          <Link href="#">
+            <div className=" items-center flex justify-center w-[130px] h-20 rounded-[40px] border-solid border-4 border-orange-500">
+              LOGIN <BiLogInCircle />
+            </div>{" "}
+          </Link>{" "}
+        </div>{" "}
+      </div>{" "}
+      {/* main box */}{" "}
+      <div className="bg-black mx-auto mt-2 text-white rounded-[70px] w-[1260px] h-[900px]">
+        <div className="flex p-5 justify-between">
+          {" "}
+          {/* left box */}{" "}
+          <div className=" flex flex-col gap-4 rounded-[60px] w-[600px] h-[850px]">
+            <div className=" rounded-[60px] ">
+              <Image
+                src={Asset2}
+                alt="#"
+                className="object-cover h-[610px] w-[600px] rounded-[60px]"
+              />
+            </div>{" "}
+            {/* button group */}{" "}
+            <div className=" text-[24px] font-mono flex-col w-[600px] rounded-[60px] h-[230px] flex">
+              <div className=" gap-2 my-auto justify-center flex flex-row">
+                <Link href="">
+                  <div className=" items-center flex justify-center w-[280px] h-20 rounded-[40px] border-solid border-4 border-sky-100">
+                    100 % COTTON MADE{" "}
+                  </div>{" "}
+                </Link>{" "}
+                <Link href="">
+                  <div className=" items-center flex justify-center w-[280px] h-20 rounded-[40px] border-solid border-4 border-sky-100">
+                    VERATILE STYLES{" "}
+                  </div>{" "}
+                </Link>{" "}
+              </div>{" "}
+              <div className=" p-3.5 flex flex-row justify-center pb-4 gap-2">
+                <Link href="">
+                  {" "}
+                  <div className=" items-center flex justify-center w-[340px] h-20 rounded-[40px] border-solid border-4 border-sky-100">
+                    ECO - FRIENDLY MATERIALS{" "}
+                  </div>{" "}
+                </Link>{" "}
+                <Link href="">
+                  <div className=" items-center flex justify-center w-[230px] h-20 rounded-[40px] border-solid border-4 border-sky-100">
+                    UPF PROTECTION{" "}
+                  </div>{" "}
+                </Link>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+          {/* right box */}{" "}
+          <div className=" gap-4 flex flex-col rounded-[60px] w-[600px]">
+            <div className="">
+              <Image
+                src={Asset3}
+                alt="#"
+                className="h-[500px]  rounded-[60px] w-[600px] object-cover"
+              />
+            </div>{" "}
+            <div className=" gap-4 flex flex-row h-[350px]rounded-[60px] w-[600px]">
+              <div className="">
+                <Image
+                  src={Asset1}
+                  alt="#"
+                  className="object-cover rounded-[60px] w-[400px] h-[350px]"
+                />
+              </div>{" "}
+              <div className=" flex justify-center items-center bg-blue-400 w-[185px] h-[350] rounded-[60px]">
+                <Link href="#collection">
+                  <p className="-rotate-90 text-[30px] font-mono flex gap-1 font-bold">
+                    EXPLORE <BiLogInCircle />
+                  </p>{" "}
+                </Link>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+          {/* * circle */}{" "}
+          <div className="items-center pt-[15px] flex justify-center text-red-600 absolute ml-[560px] mt-[455px] rounded-full w-[100px] h-[100px] text-[60px] bg-black ">
+            <span className=" animate-pulse"> ❤️ </span>{" "}
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
     </main>
-  )
-}
+  );
+};
+
+export default Home;
