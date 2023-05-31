@@ -47,15 +47,21 @@ const Bike = () => {
               </div>
 
               <div className="mt-[130px] text-white ">
-                <div className="border-solid border-2 border-white p-5 ">
+                <div className="border-solid border-2 border-white p-5 rounded-t-3xl ">
                   {" "}
-                  <div>NEW ARRIVAL</div>
-                  <div className="pt-3">GHOST</div>
-                  <div className="pt-6">RIDE ON THE EDGE... </div>
-                  <div>Unleash Speed and Precision</div>
-                  <div>Experience the Thrill</div>
+                  <div className="text-[35px] font-semibold italic">
+                    NEW ARRIVAL
+                  </div>
+                  <div className="p-2 text-[65px] bg-black font-extrabold flex justify-center items-center rounded-3xl">
+                    GHOST
+                  </div>
+                  <div className="pt-3 text-[20px]">
+                    RIDE ON THE EDGE... <br /> Unleash Speed and Precision{" "}
+                    <br />
+                    Experience the Thrill
+                  </div>
                   <Link href="">
-                    <div className="text-black mt-16 w-[150px] h-14 rounded-[40px] flex justify-center items-center drop-shadow-lg shadow-xl bg-white">
+                    <div className="text-black mt-10 ml-16 w-[150px] h-14 rounded-[40px] flex justify-center items-center drop-shadow-lg shadow-xl bg-white">
                       <div>BUY NOW</div>
                     </div>
                   </Link>
