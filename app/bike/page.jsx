@@ -11,8 +11,6 @@ const Bike = () => {
   const currentYear = new Date().getFullYear();
   return (
     <div>
-      {/* coding */}
-
       <div className="bg-black h-screen overflow-hidden">
         <nav className="font-extrabold text-white text-[60px] italic flex justify-evenly items-center px-10 py-4">
           <Link href="" className="hover:underline decoration-white ">
@@ -69,7 +67,7 @@ const Bike = () => {
               </div>
             </div>
 
-            <div className="flex justify-evenly mt-20">
+            <div className="flex justify-center mt-20 gap-20">
               <p>
                 &copy; <span>{currentYear}</span> Studio Zubair. All rights
                 reserved.
