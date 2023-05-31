@@ -10,6 +10,9 @@ module.exports = {
       animation: {
         "spin-slow": "spin 6s linear infinite",
       },
+      fontFamily: {
+        title: ["Vigo", "serif"],
+      },
     },
   },
   plugins: [],

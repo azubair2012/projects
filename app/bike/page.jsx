@@ -23,7 +23,7 @@ const Bike = () => {
           </Link>
           <Link href="">
             <div className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-200 ">
-              <h2 className="text-white text-[90px] ">GR</h2>
+              <div className="text-white text-[90px] ">GR</div>
             </div>
           </Link>
           <Link href="" className="hover:underline decoration-white ">
@@ -47,16 +47,19 @@ const Bike = () => {
               </div>
 
               <div className="mt-[130px] text-white ">
-                <h2>NEW ARRIVAL</h2>
-                <h1 className="text-white pt-3">GHOST</h1>
-                <h2 className="pt-6">RIDE ON THE EDGE... </h2>
-                <h3>Unleash Speed and Precision</h3>
-                <h3>Experience the Thrill</h3>
-                <Link href="">
-                  <div className="text-black mt-16 w-[150px] h-14 rounded-[40px] flex justify-center items-center drop-shadow-lg shadow-xl bg-white">
-                    <h3>BUY NOW</h3>
-                  </div>
-                </Link>
+                <div className="border-solid border-2 border-white p-5 ">
+                  {" "}
+                  <div>NEW ARRIVAL</div>
+                  <div className="pt-3">GHOST</div>
+                  <div className="pt-6">RIDE ON THE EDGE... </div>
+                  <div>Unleash Speed and Precision</div>
+                  <div>Experience the Thrill</div>
+                  <Link href="">
+                    <div className="text-black mt-16 w-[150px] h-14 rounded-[40px] flex justify-center items-center drop-shadow-lg shadow-xl bg-white">
+                      <div>BUY NOW</div>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
 

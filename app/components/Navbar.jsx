@@ -21,7 +21,7 @@ const Navbar = () => {
         </Link>
       </div>
       <Link href="/art">
-        <div className="h-9 w-[120px] bg-[#210b0b] text-center flex justify-center items-center text-white">
+        <div className=" rounded-md h-9 w-[120px] bg-[#210b0b] text-center flex justify-center items-center text-white">
           Contact Us
         </div>
       </Link>
